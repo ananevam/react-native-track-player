@@ -66,6 +66,10 @@ RCT_EXTERN_METHOD(setVolume:(float)volume
 RCT_EXTERN_METHOD(getVolume:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject);
 
+RCT_EXTERN_METHOD(setIsLiveStream:(BOOL)isLiveStream
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject);
+
 RCT_EXTERN_METHOD(setRate:(float)rate
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject);

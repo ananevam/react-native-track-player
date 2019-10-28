@@ -467,13 +467,20 @@ public class RNTrackPlayer: RCTEventEmitter {
         player.volume = level
         resolve(NSNull())
     }
-    
+
     @objc(getVolume:rejecter:)
     public func getVolume(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         print("Getting current volume")
         resolve(player.volume)
     }
-    
+
+    @objc(setIsLiveStream:resolver:rejecter:)
+    public func setIsLiveStream(isLiveStream: Bool, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+        print("Setting IsLiveStream to \(isLiveStream)")
+        player.nowPlayingInfoController.set(keyValue: NowPlayingInfoProperty.isLiveStream(isLiveStream))
+        resolve(NSNull())
+    }
+
     @objc(setRate:resolver:rejecter:)
     public func setRate(rate: Float, resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         print("Setting rate to \(rate)")
