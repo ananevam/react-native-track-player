@@ -129,7 +129,8 @@ declare namespace RNTrackPlayer {
   // Control Center / Notification Metadata Commands
   export function updateOptions(options: MetadataOptions): void;
   export function updateMetadataForTrack(id: string, metadata: TrackMetadata) : Promise<void>;
-
+  export function setIsLiveStream(isLiveStream: boolean): void;
+  
   // Player Playback Commands
 
   export function reset(): Promise<void>;
